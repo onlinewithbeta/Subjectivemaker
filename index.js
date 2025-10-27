@@ -1,12 +1,15 @@
 import express from 'express'
 import axios from 'axios'
 import dotenv from 'dotenv'
+import cors from "cors";
+
 dotenv.config();
 
 const apikey = process.env.APIKEY;
 
 const app = new express();
 app.use(express.json());
+app.use(cors());
 app.disable("x-powered-by");
 
 const PORT = process.env.PORT || 2023;
