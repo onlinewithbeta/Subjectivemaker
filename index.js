@@ -48,6 +48,7 @@ app.post('/', async (req, res)=> {
   console.log(comparisonData)
   const myPrompt = `Compare each user input with the correct answer and question.
   And determine if the user input is correct.
+  Take note of the units if any.
   
   Return only an array where 1 means correct (same meaning) and 0 means wrong (different meaning).
 
